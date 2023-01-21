@@ -1,0 +1,84 @@
+<html>
+<head>
+    <title> TempConverter</title>
+    <style type="text/css">
+        h1
+        {
+            font-size: 50px;
+            color:red;
+        }
+        #box
+        {
+            margin: auto;
+            margin-top: 20px;
+            height: 250px;
+            width: 600px;
+            background: linear-gradient(#7982ed,#4d56b2); 
+        }
+        #in
+        {
+            margin: auto;
+            padding: 5px;
+            font-weight: bold;
+        }
+        #ans
+        {
+            
+            margin:50px auto auto auto ;
+            height: 25px;
+            width: 100px;
+            background:linear-gradient(rgb(254, 100, 100),red );
+            color: white;
+            font-weight: bold;
+            font-size: large;
+            text-align: center;
+        }
+        #option
+        {
+            margin-top: 25px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <center><img src="https://cdn-icons-png.flaticon.com/512/2865/2865904.png" height="140px" width="140px"></center>
+    <center><h1>TempConverter</h1></center>
+    <div id="box">
+        <center><select id="option"></center>
+        <option id="opt" value="C to F">C to F</option>
+        <option id="opt" value="F to C">F to C</option>
+        </select>
+        <br>
+        <br>
+        <input id="in" type="text">
+        <button id="submit">Submit</button>
+        <div id="ans">
+            <p id="out"> </p>
+        </div>
+    </div>
+    
+    <script type="text/javascript">
+        
+        if (document.getElementById("opt").value="C to F")
+        {
+        document.getElementById("submit").onclick=function()
+        {
+        var textEntered = "";
+        textEntered=document.getElementById("in").value;
+        document.getElementById("out").innerHTML = textEntered*1.8 +32 + " F";
+        }
+        }
+
+        else if (document.getElementById("opt").value="F to C")
+        {document.getElementById("submit").onclick=function()
+        {
+        var textEntered = "";
+        textEntered=document.getElementById("in").value;
+        document.getElementById("out").innerHTML = (textEntered-32)*0.5556;
+        }
+    }
+        
+    </script>
+
+</body>
+</html>
